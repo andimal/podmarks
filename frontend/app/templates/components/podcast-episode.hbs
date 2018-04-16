@@ -1,0 +1,27 @@
+<div class="image">
+  <img src="{{art}}"/>
+</div>
+<div class="content">
+  <div class="meta">
+    {{episode.podcast}}
+  </div>
+  <div class="header">
+    <a href="{{episode.url}}" target="_blank">
+      {{episode.title}}
+    </a>
+  </div>
+  <div class="description">
+    <ul>
+      {{#if episode.description}}
+        <li>{{{episode.description}}}</li>
+      {{/if}}
+      {{#each sortedTimes as |time|}}
+        <li>
+          <a href="{{time.url}}" target="_blank">
+            {{time.time}}
+          </a> - {{{time.description}}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

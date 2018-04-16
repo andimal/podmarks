@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'starpod',
+    modulePrefix: 'podmarks',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -29,6 +29,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiHost = 'http://localhost:5000'
   }
 
   if (environment === 'test') {
@@ -44,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.apiHost = 'http://podmarks.andimal.co'
   }
 
   return ENV;
