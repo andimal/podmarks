@@ -30,6 +30,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.apiHost = 'http://localhost:5000'
+    ENV.apiNamespace = '';
   }
 
   if (environment === 'test') {
@@ -45,7 +46,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'http://podmarks.andimal.co'
+    ENV.apiHost = 'http://podmarks.andimal.co';
+    ENV.apiNamespace = 'api';
   }
 
   return ENV;

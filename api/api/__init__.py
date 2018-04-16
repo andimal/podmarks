@@ -66,10 +66,10 @@ def episodes():
                 }
             }
 
-        if has_time:
-            obj['attributes']['times'].append(time_object(url_split_last, post))
-        else:
-            obj['attributes']['description'] = post['description']
+            if has_time:
+                obj['attributes']['times'].append(time_object(url_split_last, post))
+            else:
+                obj['attributes']['description'] = post['description']
 
         records.append(obj)
         episodeTitles.append(title)
