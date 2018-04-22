@@ -1,5 +1,19 @@
-<div class="ui link cards">
-  {{#each model as |episode|}}
-    {{podcast-episode episode=episode}}
-  {{/each}}
+<div class="ui pushable segment component context">
+  {{#ui-sidebar class="inverted menu left inline vertical visible" context=".component.context"}}
+    <div class="ui icon input">
+      {{input class="prompt" value=query placeholder="Search..."}}
+      <i class="search icon"></i>
+    </div>
+
+    {{#each uniquePods as |podcast|}}
+      <a class="item" {{action "filterByPod" podcast}}>{{podcast}}</a>
+    {{/each}}
+  {{/ui-sidebar}}
+  <div class="pusher">
+    <div class="ui link cards">
+      {{#each filteredEpisodes as |episode|}}
+        {{podcast-episode episode=episode}}
+      {{/each}}
+    </div>
+  </div>
 </div>

@@ -29,8 +29,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.apiHost = 'http://localhost:5000'
-    ENV.apiNamespace = '';
+    // ENV.apiHost = 'http://localhost:5000'
+    ENV.apiHost = 'http://podmarks.andimal.co';
+    ENV.apiNamespace = 'api';
   }
 
   if (environment === 'test') {
