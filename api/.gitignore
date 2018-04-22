@@ -24,3 +24,4 @@ include
 lib
 env.py
 pip-selfcheck.json
+episodes.json
